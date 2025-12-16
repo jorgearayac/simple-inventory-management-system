@@ -6,4 +6,14 @@ class Inventory
     {
         products.Add(product);
     }
+
+    public void ViewProducts()
+    {
+        Console.WriteLine("=== Inventory Products ===");
+
+        foreach (var p in products)
+        {
+            Console.WriteLine(p);
+        }
+    }
 }
