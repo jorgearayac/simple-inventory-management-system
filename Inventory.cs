@@ -32,4 +32,9 @@ class Inventory
         return null;
     }
 
+    // Delete a product by product instance
+    public bool DeleteProduct(Product product)
+    {
+        return products.Remove(product);
+    }
 }
