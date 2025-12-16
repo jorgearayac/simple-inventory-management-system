@@ -69,6 +69,7 @@ class Program
             Console.WriteLine("2. View Products");
             Console.WriteLine("3. Edit a Product");
             Console.WriteLine("4. Delete a Product");
+            Console.WriteLine("5. Search for a Product");
             Console.WriteLine("0. Exit");
             Console.Write("Choose an option: ");
 
@@ -134,6 +135,21 @@ class Program
                     else
                     {
                         Console.WriteLine("Failed to delete product.");
+                    }
+                    break;
+
+                case "5":
+                    string searchName = PromptString("Enter the name of the product to search: ");
+                    Product? foundProduct = inventory.FindProduct(searchName);
+
+                    if (foundProduct == null)
+                    {
+                        Console.WriteLine($"Product '{searchName}' not found.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Product found:");
+                        Console.WriteLine(foundProduct);
                     }
                     break;
 
