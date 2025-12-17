@@ -64,6 +64,8 @@ class Program
     {
         while (true)
         {
+            Console.WriteLine("Welcome to the Inventory Management System!");
+            Console.WriteLine("--------------------------------------------");
             Console.WriteLine("Menu:");
             Console.WriteLine("1. Add Product");
             Console.WriteLine("2. View Products");
